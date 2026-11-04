@@ -50,6 +50,24 @@ function shfaqStudentet() {
       shfaqStudentet();
     });
 
+    const ikona = document.createElement("span");
+    ikona.className = "student-icon";
+    ikona.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="21" height="21"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="1.8"
+       stroke-linecap="round"
+       stroke-linejoin="round">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+  </svg>
+`;
+    
+    studenti.appendChild(ikona);
+    
     studenti.appendChild(emriStudentit);
     studenti.appendChild(butoniModifiko);
     studenti.appendChild(document.createTextNode(" "));
