@@ -11,8 +11,18 @@ forma.addEventListener("submit", function(event) {
   if (!emri) return;
 
   const studenti = document.createElement("li");
-  studenti.textContent = emri;
+  const emriStudentit = document.createElement("span");
+  emriStudentit.textContent = emri + " ";
 
+  const butoniFshi = document.createElement("button");
+  butoniFshi.textContent = "Fshi";
+
+  butoniFshi.addEventListener("click", function() {
+    studenti.remove();
+  });
+
+  studenti.appendChild(emriStudentit);
+  studenti.appendChild(butoniFshi);
   lista.appendChild(studenti);
 
   forma.reset();
